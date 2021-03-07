@@ -1,0 +1,212 @@
+{
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT ",
+    "version": "eosio::abi/1.1",
+    "types": [],
+    "structs": [
+        {
+            "name": "day_buffer_row",
+            "base": "",
+            "fields": [
+                {
+                    "name": "timestamp",
+                    "type": "time_point_sec"
+                },
+                {
+                    "name": "volume_cumulative",
+                    "type": "pair_symbol_code_asset[]"
+                },
+                {
+                    "name": "base_price",
+                    "type": "pair_symbol_code_float64[]"
+                },
+                {
+                    "name": "volume",
+                    "type": "pair_symbol_code_asset[]"
+                },
+                {
+                    "name": "open_price",
+                    "type": "pair_symbol_code_float64[]"
+                },
+                {
+                    "name": "high_price",
+                    "type": "pair_symbol_code_float64[]"
+                },
+                {
+                    "name": "low_price",
+                    "type": "pair_symbol_code_float64[]"
+                },
+                {
+                    "name": "close_price",
+                    "type": "pair_symbol_code_float64[]"
+                }
+            ]
+        },
+        {
+            "name": "log",
+            "base": "",
+            "fields": [
+                {
+                    "name": "converter",
+                    "type": "name"
+                },
+                {
+                    "name": "swap_data",
+                    "type": "swap_record[]"
+                }
+            ]
+        },
+        {
+            "name": "month_buffer_row",
+            "base": "",
+            "fields": [
+                {
+                    "name": "timestamp",
+                    "type": "time_point_sec"
+                },
+                {
+                    "name": "open_smart_price",
+                    "type": "pair_symbol_code_float64[]"
+                }
+            ]
+        },
+        {
+            "name": "pair_symbol_code_asset",
+            "base": "",
+            "fields": [
+                {
+                    "name": "key",
+                    "type": "symbol_code"
+                },
+                {
+                    "name": "value",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "pair_symbol_code_float64",
+            "base": "",
+            "fields": [
+                {
+                    "name": "key",
+                    "type": "symbol_code"
+                },
+                {
+                    "name": "value",
+                    "type": "float64"
+                }
+            ]
+        },
+        {
+            "name": "reset",
+            "base": "",
+            "fields": [
+                {
+                    "name": "converter",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "swap_record",
+            "base": "",
+            "fields": [
+                {
+                    "name": "quantity",
+                    "type": "asset"
+                },
+                {
+                    "name": "price",
+                    "type": "float64"
+                },
+                {
+                    "name": "liquidity_depth",
+                    "type": "asset"
+                },
+                {
+                    "name": "smart_price",
+                    "type": "float64"
+                }
+            ]
+        },
+        {
+            "name": "trade_data",
+            "base": "",
+            "fields": [
+                {
+                    "name": "converter",
+                    "type": "name"
+                },
+                {
+                    "name": "timestamp",
+                    "type": "time_point_sec"
+                },
+                {
+                    "name": "volume_24h",
+                    "type": "pair_symbol_code_asset[]"
+                },
+                {
+                    "name": "volume_cumulative",
+                    "type": "pair_symbol_code_asset[]"
+                },
+                {
+                    "name": "price",
+                    "type": "pair_symbol_code_float64[]"
+                },
+                {
+                    "name": "price_change_24h",
+                    "type": "pair_symbol_code_float64[]"
+                },
+                {
+                    "name": "liquidity_depth",
+                    "type": "pair_symbol_code_asset[]"
+                },
+                {
+                    "name": "smart_price",
+                    "type": "pair_symbol_code_float64[]"
+                },
+                {
+                    "name": "smart_price_change_30d",
+                    "type": "pair_symbol_code_float64[]"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "name": "log",
+            "type": "log",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "reset",
+            "type": "reset",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [
+        {
+            "name": "daybuffer",
+            "type": "day_buffer_row",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "monthbuffer",
+            "type": "month_buffer_row",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "tradedata",
+            "type": "trade_data",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        }
+    ],
+    "ricardian_clauses": [],
+    "variants": []
+}
